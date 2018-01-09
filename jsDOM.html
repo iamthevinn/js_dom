@@ -23,9 +23,20 @@ of the array as <li> tags.
         }
     };
 
+    function superAppend(array, element, id) {
+        for (let i = 0; i < array.length; i++) {
+            let name = document.createElement(element);
+            name.innerHTML = array[i];
+            document.getElementById(id).appendChild(name);
+        }
+    };
+
     let students = ["Jeff", "Jenny", "Javier", "Joslyn", "Joe", "Jane", "Django"];
     let target_id = "main";
     appendList(students, target_id);
+    superAppend(students, "p", "main");
+    superAppend(students, "li", "main");
+    superAppend(students, "h1", "main");
   </script>   
 </body>
 </html>
