@@ -14,10 +14,18 @@ of the array as <li> tags.
         <!-- this is empty-->
     </ul> 
   <script>
-    console.log("Assignment: JavaScript DOM I");
-    function appendList(array, id){
-        // finish this function
+    function appendList(array, id) {
+        // Loop through each element in the array and add as a list item
+        for (let i = 0; i < array.length; i++) {
+            let name = document.createElement("li");
+            name.innerHTML = array[i];
+            document.getElementById(id).appendChild(name);
+        }
     };
+
+    let students = ["Jeff", "Jenny", "Javier", "Joslyn", "Joe", "Jane", "Django"];
+    function 
+
     let students = ["Jeff", "Jenny", "Javier", "Joslyn", "Joe", "Jane", "Django"];
     let target_id = "main";
     appendList(students, target_id);
